@@ -40,7 +40,7 @@ flowchart LR
   api --> browser
 ```
 
-Node serves one page and talks to Ollama at `127.0.0.1:11434`. The model must return JSON with the remembrance, the exact foods/songs/stories it used, offerings, and a spoken line. Candela checks that those lists are subsets of your notes, that the prose names the person and touches a concrete fact, and that long invented tokens do not appear. Ritual words like candle and marigold are allowed. Paris concerts are not.
+Node serves one page and talks to Ollama at `127.0.0.1:11434`. The model must return JSON with the remembrance, the exact foods/songs/stories it used, offerings, and a spoken line. Candela checks that those lists are subsets of your notes, that the prose names the person, and that the remembrance touches a concrete fact from the notes. If a draft invents a food or song you never wrote, Candela retries once, then refuses.
 
 ## Why Does Open Innovation Matter?
 
